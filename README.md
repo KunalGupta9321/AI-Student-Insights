@@ -57,7 +57,26 @@ The dataset contains **50,000 student records** and includes variables related t
 
 The processed dataset includes an `AI_Usage_Group` feature for comparing different levels of weekly AI usage.
 
+**Dataset Source:** [AI Impact on Students — Kaggle](https://www.kaggle.com/datasets/laveshjadon/ai-impact-on-students)
+
+The dataset is used for educational and exploratory data analysis purposes. Please refer to the original dataset page for its provenance and licensing terms.
+
 **Data note:** The dataset's representativeness, collection process, and variable definitions should be verified against its original documentation before drawing conclusions about students more broadly.
+
+### 🧹 Data Quality and Preprocessing
+
+The original dataset contains 50,000 records and 16 columns. The initial quality checks identified no missing cells, no duplicate rows, and no duplicate `Student_ID` values.
+
+The `Student_ID` column was excluded from the analytical dataset because it serves as a record identifier rather than a meaningful analytical feature. Since no missing values were detected, imputation was unnecessary. Duplicate removal was also unnecessary because no duplicate rows were found.
+
+A derived feature, `AI_Usage_Group`, was created from weekly generative AI usage hours to support group-wise comparisons:
+
+* **Low:** 5 hours or fewer per week
+* **Moderate:** More than 5 and up to 10 hours
+* **High:** More than 10 and up to 20 hours
+* **Very High:** More than 20 hours
+
+These categories were used for descriptive comparisons and should not be interpreted as validated thresholds for healthy or unhealthy AI use.
 
 ### 🛠️ Technologies Used
 
@@ -112,6 +131,25 @@ The project includes 22 exported visualizations covering:
 * Prompt-engineering skill and institutional policy distributions
 
 Visualizations are available in `images/visualizations/`.
+
+#### Selected Visualization Highlights
+
+**Correlation Heatmap**
+
+![Correlation Heatmap](images/visualizations/correlation_heatmap.png)
+
+**Weekly AI Usage vs. Perceived AI Dependency**
+
+![AI Usage and Perceived AI Dependency](images/visualizations/weekly_genai_vs_perceived_ai_dependency.png)
+
+**Anxiety Levels by AI Usage Group**
+
+![Anxiety Levels by AI Usage Group](images/visualizations/anxiety_levels_by_ai_usage.png)
+
+**Skill Retention by AI Usage Group**
+
+![Skill Retention by AI Usage Group](images/visualizations/skill_retention_by_ai_usage.png)
+
 
 ### 📄 EDA Report
 
