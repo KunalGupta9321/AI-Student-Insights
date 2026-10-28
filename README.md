@@ -123,22 +123,20 @@ The report summarizes the dataset, methodology, descriptive statistics, visual f
 
 ### ⚙️ Installation and Setup
 
-**1. Clone the repository**
+### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/KunalGupta9321/AI-Student-Insights.git
 cd AI-Student-Insights
 ```
 
-Replace `<YOUR_GITHUB_REPOSITORY_URL>` with your actual repository URL.
-
-**2. Create a virtual environment**
+### 2. Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-**3. Activate the environment**
+### 3. Activate the environment
 
 Windows PowerShell:
 
@@ -146,13 +144,13 @@ Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
 ```
 
-**4. Install dependencies**
+### 4. Install dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-**5. Open the notebook**
+### 5. Open the notebook
 
 ```bash
 jupyter notebook notebooks/student_ai_usage_eda.ipynb
